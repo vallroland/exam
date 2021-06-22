@@ -2,6 +2,7 @@
 
 ## profile
 ### all of the api function create, read, search, update, delete is reflected in this table 
+```bash
 CREATE TABLE IF NOT EXISTS profile(
 	id SERIAL PRIMARY KEY,
 	first_name VARCHAR(255) NOT NULL,
@@ -12,11 +13,13 @@ CREATE TABLE IF NOT EXISTS profile(
   	date_created  timestamp,
 	date_update timestamp
 );
+```
+
 
 ## api user
 #for you to use the 5 endpoints of the api you must have an api credentials
 #you can create api credentials in  simulation file cli.create.api.user.php
-
+```bash
 CREATE TABLE IF NOT EXISTS api_user(
 	id SERIAL PRIMARY KEY,
 	username VARCHAR(255) NOT NULL,
@@ -25,10 +28,12 @@ CREATE TABLE IF NOT EXISTS api_user(
   	date_created  timestamp,
 	date_update timestamp
 );
+```
 
 # Api Functions/Endpoints
 
 ## create / add profile record
+```bash
 api url: http://imroland.com/exam/create/
 method: Post
 parameters: 
@@ -44,8 +49,10 @@ Response:
     "status": "Success",
     "message": "Record created"
 }
+```
 
 ## update / update or edit profile record
+```bash
 api url: http://imroland.com/exam/update/{id of record}
 example url: api url: http://imroland.com/exam/update/18
 method: Post
@@ -59,8 +66,9 @@ Response:
     "message": "Affected rows 1",
     "id": "18"
 }
-
+```
 ## delete record
+```bash
 api url: http://imroland.com/exam/delete/{id of record}
 example url: http://imroland.com/exam/delete/87
 method: Post
@@ -73,8 +81,9 @@ Response:
     "message": "Delete Success",
     "id": "87"
 }
-
+```
 ## read/ read or select specific record based on id
+```bash
 api url: http://imroland.com/exam/read/{id of record}
 example url: http://imroland.com/exam/read/18
 method: Post
@@ -97,7 +106,7 @@ Response:
         }
     ]
 }
-
+```
 ## search/ view or search record based on passed parameters
 ```bash
 api url: http://imroland.com/exam/search
