@@ -115,6 +115,7 @@ parameters: "You just need to pass what field you want to search. if you dont pa
 	username: "Api Username"
 	password: "Api Password"
 	first_name: "Rol"
+Response:
 {
     "status": "Success",
     "data": [
